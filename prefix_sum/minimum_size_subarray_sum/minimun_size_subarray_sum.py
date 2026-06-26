@@ -17,8 +17,8 @@ def minSubArrayLen(target, nums):
       for i in range(len(nums)):
             for j in range(i,len(nums)):
                   if (i==j):
-                        if((nums[i]==target)):
-                              min_length=1
+                        if((nums[i]>=target)):
+                              return 1
                   else:
                         sum_bet_i_j=0
                         curr_length=j-i+1
@@ -27,7 +27,7 @@ def minSubArrayLen(target, nums):
                         else:
                               sum_bet_i_j=prefix_sum_arr[j]-prefix_sum_arr[i-1]
 
-                        if((sum_bet_i_j==target)):
+                        if((sum_bet_i_j>=target)):
                               if((min_length==0) or (min_length >curr_length)):
                                     min_length=curr_length
                  
