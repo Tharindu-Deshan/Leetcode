@@ -24,7 +24,8 @@ def binary_search_recursion(array,target):
     else:
         return binary_search_recursion(array[:mid],target)
 
-    
+
+    #need to look at this 
 def binary_search_recursion_v2(array, target, left=0, right=None):
     if right is None:
         right = len(array) - 1
