@@ -18,9 +18,8 @@ def dp_fib(n,memo):
         return memo[n]
     else:
         x=dp_fib(n-1,memo)+dp_fib(n-2,memo)
-        if (n not in memo):
-            memo[n]=x
-        return dp_fib(n-1,memo)+dp_fib(n-2,memo)
+        memo[n]=x
+        return x
 
 def dp_fib_main(n):
     memo={}

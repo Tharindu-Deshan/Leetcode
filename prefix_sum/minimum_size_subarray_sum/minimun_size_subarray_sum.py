@@ -6,7 +6,7 @@ def minSubArrayLen(target, nums):
 
       Input: target = 7, nums = [2,3,1,2,4,3]            prefix_sum = [2, 5, 6, 8, 12, 15]
       Output: 2
-      Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+      Explanation: The subarray [4,3] has the minimal length under the problem constraint - greater than or equal to target.
       """
       min_length =0
       prefix_sum_arr=nums[:]
@@ -34,13 +34,7 @@ def minSubArrayLen(target, nums):
       return min_length
 
                               
-                        
-
-
-
-
       
-
 
 nums = [2,3,1,2,4,3]
 x=minSubArrayLen(7,nums)
