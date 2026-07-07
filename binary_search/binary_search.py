@@ -24,7 +24,6 @@ def binary_search_recursion(array,target):
     else:
         return binary_search_recursion(array[:mid],target)
 
-
     #need to look at this 
 def binary_search_recursion_v2(array, target, left=0, right=None):
     if right is None:
@@ -35,9 +34,9 @@ def binary_search_recursion_v2(array, target, left=0, right=None):
     if array[mid] == target:
         return True
     elif array[mid] < target:
-        return binary_search_recursion(array, target, mid + 1, right)
+        return binary_search_recursion_v2(array, target, mid + 1, right)
     else:
-        return binary_search_recursion(array, target, left, mid - 1)
+        return binary_search_recursion_v2(array, target, left, mid - 1)
 
 
 list_1=[7,8,9,10,100]
